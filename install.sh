@@ -43,7 +43,7 @@ echo ""
 
 info "2. Назначение временных DNS (1.1.1.1 + 8.8.8.8), чтобы гарантировать установку и регистрацию wgcf..."
 sudo cp /etc/resolv.conf /etc/resolv.conf.backup
-echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" > /etc/resolv.conf || error_exit "Не удалось настроить временные DNS-серверы."
+sudo echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" > /etc/resolv.conf || error_exit "Не удалось настроить временные DNS-серверы."
 ok "Временные DNS-серверы установлены."
 echo ""
 
